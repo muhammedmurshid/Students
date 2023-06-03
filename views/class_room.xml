@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="faculty_class_room_basic_view" model="ir.ui.view">
+        <field name="name">Class Room Details</field>
+        <field name="model">class.room</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Class">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"
+                           widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="faculty_class_room_data_tree" model="ir.ui.view">
+        <field name="name">Class Room Details</field>
+        <field name="model">class.room</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_claas_room_view_form">
+        <field name="name">Class Room</field>
+        <field name="res_model">class.room</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Class Room" id="menu_class_room" action="action_claas_room_view_form"
+              parent="menu_students"
+              sequence="2"/>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_student,access_details,model_student_details,base.group_user,1,1,1,1
+access_class_room,access_class_room,model_class_room,base.group_user,1,1,1,1
+access_branch,access_branch,model_logic_branches,base.group_user,1,1,1,1
+access_course,access_course,model_logic_courses,base.group_user,1,1,1,1
+access_batch,access_batch,model_logic_batches,base.group_user,1,1,1,1
